@@ -28,10 +28,9 @@ jobs:
 
       - name: Zip Lambda function code
         # Replace 'process_card.mjs' with the actual name of your Lambda handler file.
-        run: zip -r function.zip process_card.mjs
+        run: zip -r function.zip tucker-process-transactions.mjs
 
       - name: Deploy to AWS Lambda
         run: |
-          aws lambda update-function-code \
-            --function-name process_card \
-            --zip-file fileb://function.zip
+          aws lambda update-function-code --function-name tucker-process-transactions --zip-file fileb://function.zip
+
