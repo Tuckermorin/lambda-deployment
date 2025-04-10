@@ -21,9 +21,9 @@ jobs:
           aws-region: us-west-1  
 
       - name: Zip Lambda function code
-        run: zip -r function.zip tucker_process_transactions.mjs # <- this needs to be changed to be YOUR .mjs file name. 
+        run: zip -r function.zip tucker-process-transactions.mjs # <- this needs to be changed to be YOUR .mjs file name. 
 
       - name: Deploy to AWS Lambda
         run: |
           aws lambda update-function-code \
-            --function-name tucker_process_transactions \ # <- this needs to be YOUR function name as appears in the lambda function list 
+            --function-name tucker-process-transactions \ # <- this needs to be YOUR function name as appears in the lambda function list 
